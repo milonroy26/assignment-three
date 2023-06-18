@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation</title>
+</head>
+<body>
+    
+    <h1>This site can acces your location?</h1>
+    <p>continue allowing This site to acces your location?</p>
+
+    <script>
+    
+    function getCurrentLocation() {
+        navigator.geolocation.getCurrentPosition((position) =>{
+        let latitude = position.coords.latitude;
+        let longitude = position.coords.longitude;
+    
+        document.write(`latitude: ${latitude}`); 
+        document.write(`longitude: ${longitude}`); 
+      }
+     );
+    }
+
+    getCurrentLocation();
+
+    </script>
+
+</body>
+</html>
