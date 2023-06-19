@@ -5,18 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Common Events</title>
 </head>
-<body style="height: 100vh;"  onclick="displayCoordinates(event)">
+<body>
 
-    
+    <h2>a. When the user clicks anywhere on the page, display an alert with the coordinates (x, y) of the click. </h2>
+    <button onclick="displayCoordinates(event)">Display Coordinates</button> <br> <br>
 
+    <h2>b. When the user presses any key on the keyboard, display an alert with the key code of the pressed key. </h2>
+    <input type="text" onkeypress="myFunction()"> 
+    <br> <br>
+
+    <h3>c. When the user moves the mouse over an image, change the image source to another image of your choice. </h3>
+    <img id="myImg" src="https://fastly.picsum.photos/id/4/5000/3333.jpg?hmac=ghf06FdmgiD0-G4c9DdNM8RnBIN7BO0-ZGEw47khHP4" width="300" height="200" alt="">
     <script>
 
     function displayCoordinates(event) {
       var x = event.clientX;
       var y = event.clientY;
-      alert("Clicked coordinates: (" + x + ", " + y + ")");
+      alert(`Click coordinates: ${x} ${y}`);
     }
 
+
+    onkeypress="KeyPressCheck(event)"
+
+    //a. When the user clicks anywhere on the page, display an alert with the coordinates (x, y) of the click. 
+    function KeyPressCheck(event){
+      console.log('pressed::'+ event.keyCode);
+    }
+
+    //b. When the user presses any key on the keyboard, display an alert with the key code of the pressed key.
+    function myFunction() {
+      let value = document.querySelector('input[type=text]').value;
+      alert("value is: " + value);
+    }
+
+    //c. When the user moves the mouse over an image, change the image source to another image of your choice.
+    let img = document.getElementById('myImg');
+    img.addEventListener('mousemove', function(){
+      img.src = 'https://fastly.picsum.photos/id/57/2448/3264.jpg?hmac=ewraXYesC6HuSEAJsg3Q80bXd1GyJTxekI05Xt9YjfQ';
+    })
+
+
+  
     </script>
 
 </body>

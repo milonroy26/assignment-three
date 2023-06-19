@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML DOM Document</title>
+</head>
+<body>
+
+    <h2>8.HTML DOM Document:</h2>
+    
+    <p id="myText">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti, vitae.</p>
+    <button id="myBtn">Clicked</button>
+
+
+    <script>
+        const myBtn = document.getElementById('myBtn');
+        myBtn.addEventListener('click', function(){
+            const paragraph = document.getElementById('myText');
+           paragraph.textContent = 'Button Clicked!';
+        })
+        
+    </script>
+    
+</body>
+</html>
