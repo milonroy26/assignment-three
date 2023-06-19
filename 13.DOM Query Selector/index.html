@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Query</title>
+</head>
+<body>
+
+    <h2>DOM Query Selector</h2>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, asperiores.</p>
+    <p class="lorem15">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ex sapiente aliquam, quod ut magni.</p>
+    <p id="lorem20">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus vitae aut inventore rem consectetur earum ratione nostrum temporibus ea aliquid.</p>
+
+    <button onclick="changeColor()">Change Color</button>
+
+
+
+    <script>
+        function changeColor(){
+            document.querySelector('p').style.color = 'red';
+            document.querySelector('.lorem15').style.color = 'red';
+            document.querySelector('#lorem20').style.color = 'red';
+        }
+    </script>
+
+</body>
+</html>

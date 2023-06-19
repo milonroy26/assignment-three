@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+</head>
+<body>
+    <h1>Ajax Post Request</h1>
+
+    <script src="axios.js"></script>
+
+    <script>
+        getInfo();
+        async function getInfo(){
+
+            let url = 'https://jsonplaceholder.typicode.com/posts';
+            let res= await axios.post(url,
+            
+            JSON.stringify({
+                title: 'foo',
+                body: 'bar',
+                userId: 1,
+            }),
+            
+            );
+
+            if(res.status === 200){
+                let items = res.data;
+                console.log(items);
+            }
+
+            else{
+                alert('error hoice');
+            }
+
+        }
+    </script>
+</body>
+</html>

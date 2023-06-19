@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manipulate</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+    <p id="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam hic sed minus quidem, modi amet atque vero explicabo vel perferendis quod, unde laudantium cum nulla ratione beatae accusamus est facere?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab fugiat minus tenetur ducimus placeat. Alias explicabo odit culpa dolorum nam aliquam sapiente libero repellendus, consectetur illo! Illum voluptatibus, itaque eligendi explicabo, cum harum labore, dolorum eum dolore molestiae fugit. Ipsam.</p>
+
+    <button onclick="myFunction()">clicked</button>
+
+
+    <script>
+        function myFunction(){
+            let item = document.getElementById('item');
+            item.classList.add("highlight"); 
+        }
+    </script>
+</body>
+</html>

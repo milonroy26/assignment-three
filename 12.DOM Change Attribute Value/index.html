@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Change</title>
+</head>
+<body>
+    <h2>DOM Change Attribute Value</h2>
+    <img id="myImage" src="https://fastly.picsum.photos/id/866/200/300.jpg?hmac=rcadCENKh4rD6MAp6V_ma-AyWv641M4iiOpe1RyFHeI" alt="">
+    <button id="changeSource">Change Image</button>
+
+
+
+    <script>
+
+        const btn = document.getElementById('changeSource');
+        btn.addEventListener('click', function(){
+            let image = document.getElementById('myImage');
+            image.src = 'https://fastly.picsum.photos/id/237/200/300.jpg?hmac=TmmQSbShHz9CdQm0NkEjx1Dyh_Y984R9LpNrpvH2D_U';
+        })
+        
+    </script>
+</body>
+</html>
