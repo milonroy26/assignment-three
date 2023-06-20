@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>2.Math Object</h2>
+    
+
+    <script>
+        const num = [2, 4, 6, 8, 10];
+    
+        function squareRootOfSumOfSquares(num) {
+            let sumSquares = 0;
+            
+            for (let i = 0; i < num.length; i++) {
+                sumSquares += Math.pow(num[i], 2);
+            }
+            
+            var squareRoot = Math.sqrt(sumSquares);
+            return squareRoot;
+        }
+
+        alert(squareRootOfSumOfSquares(num));
+
+    </script>
+</body>
+</html>

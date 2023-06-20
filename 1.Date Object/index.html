@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Date Object</h2>
+
+
+
+    <script>
+        function getDayOfWeek(dateString) {
+            let dateParts = dateString.split('-');
+            let year = parseInt(dateParts[0]);
+            let month = parseInt(dateParts[1]) - 1; // Months in JavaScript are zero-based
+            let day = parseInt(dateParts[2]);
+
+            let date = new Date(year, month, day);
+            let daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            let dayOfWeek = daysOfWeek[date.getDay()];
+
+            return dayOfWeek;
+        }
+
+        let inputDate = '2023-06-20';
+        const dayOfWeek = getDayOfWeek(inputDate);
+        alert(dayOfWeek); 
+
+        </script>
+    
+</body>
+</html>
